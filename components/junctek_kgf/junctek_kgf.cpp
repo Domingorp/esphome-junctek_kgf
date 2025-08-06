@@ -285,6 +285,11 @@ void JuncTekKGF::loop()
     sprintf(buffer, ":R50=%d,2,1,\r\n", this->address_);
     write_str(buffer);
   }
+
+  if (readline())
+  {      
+    handle_line();
+  }
 // End of Old Code
   //const unsigned long start_time = esphome::millis();
  
